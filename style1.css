@@ -1,0 +1,161 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 00vh;
+  width: 40vh;
+}
+
+body {
+  font-family: sans-serif;
+  min-height: 100px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url("back.svg");
+  display: flex;
+}
+
+form{
+  color: #ffffff;
+}
+
+main{
+  position: relative;
+  margin-top: 1vh;
+  left: 10vh;
+  width: 70vh;
+  justify-content: center;
+}
+
+.carousel {
+  height: 600px;
+  width: 800px;
+  display: flex;
+  margin-right: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  perspective: 100rem;
+  left: 10vh;
+  top: 2vh;
+}
+
+
+.carousel__cards {
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25rem);
+  transition: transform 0.3s ease-in;
+}
+
+
+.carousel__img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0.3;
+}
+
+.carousel__card:first-child .carousel__img{
+  opacity: 1;
+}
+
+.carousel__card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 0.2rem;
+  font-size: 3em;
+  font-weight: 700;
+  color: #000000;
+
+}
+
+.card-body{
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.moon{
+  position: relative;
+  visibility:visible;
+}
+
+
+.carousel__card:nth-child(1) {
+  transform: rotateY(0deg) translateZ(25rem);
+
+}
+.carousel__card:nth-child(2) {
+  transform: rotateY(45deg) translateZ(25rem);
+
+}
+.carousel__card:nth-child(3) {
+  transform: rotateY(90deg) translateZ(25rem);
+}
+.carousel__card:nth-child(4) {
+  transform: rotateY(135deg) translateZ(25rem);
+}
+.carousel__card:nth-child(5) {
+  transform: rotateY(180deg) translateZ(25rem);
+}
+.carousel__card:nth-child(6) {
+  transform: rotateY(225deg) translateZ(25rem);
+}
+.carousel__card:nth-child(7) {
+  transform: rotateY(270deg) translateZ(25rem);
+}
+.carousel__card:nth-child(8) {
+  transform: rotateY(315deg) translateZ(25rem);
+}
+
+
+.carousel__img.is-flipped {
+  opacity: 1;
+}
+
+.btn-primary, .btn-secondary{
+  border: none !important;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.3) !important ; 
+  cursor: pointer;
+  margin: 0 2rem;
+  margin-top: 10px;
+}
+
+
+.card{
+  background:rgba(255, 255, 255, 0.3) !important;
+  width: 600px;
+  color: #ffffff;
+}
+
+.card-body{
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+
